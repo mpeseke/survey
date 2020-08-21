@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link rel="stylesheet" type="text/css" href="style/survey-style.css" />
+        
+        <title>A Survey Form</title>
+    </head>
+
+    <body>
+
+        <div class="survey-wrapper">
+
+            <h1 id="title">Survey</h1>
+            <p id="description">This is a short survey.</p>
+
+            <form>
+                <label for="name" id="name-label">name: </label>
+                <input type="text" id="name" />
+                <hr/>
+                <label for="email" id="email-label">email: </label>
+                <input type="email" id="email" />
+                <hr/>
+                <label for="number" id="number-label">number: </label>
+                <input type="number" id="number" min="0" max="9" placeholder="must be between 0 and 9" width="300px"/>
+                <hr/>
+                <label for="color" id="color-label">pick a color: </label>
+                <select id="dropdown">
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Green</option>
+                    <option>Yellow</option>
+                </select>
+                <hr/>
+                <label for="boolean" id="boolean-label">choose one: </label><br/>
+                <label for="boolean-true">true</label>
+                <input type="radio" name="boolean" id="boolean-true">
+                <label for="boolean-false">false</label>
+                <input type="radio" name="boolean" id="boolean-false">
+                <hr/>
+                
+
+            </form>
+        </div>
+
+    </body>
+</html>
