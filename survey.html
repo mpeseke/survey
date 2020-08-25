@@ -12,38 +12,82 @@
 
     <body>
 
-        <div class="survey-wrapper">
+        <div class="flex-wrapper">
 
-            <h1 id="title">Survey</h1>
-            <p id="description">This is a short survey.</p>
+            <article>
+                <header class="article-header">
 
-            <form>
-                <label for="name" id="name-label">name: </label>
-                <input type="text" id="name" />
-                <hr/>
-                <label for="email" id="email-label">email: </label>
-                <input type="email" id="email" />
-                <hr/>
-                <label for="number" id="number-label">number: </label>
-                <input type="number" id="number" min="0" max="9" placeholder="must be between 0 and 9" width="300px"/>
-                <hr/>
-                <label for="color" id="color-label">pick a color: </label>
-                <select id="dropdown">
-                    <option>Red</option>
-                    <option>Blue</option>
-                    <option>Green</option>
-                    <option>Yellow</option>
-                </select>
-                <hr/>
-                <label for="boolean" id="boolean-label">choose one: </label><br/>
-                <label for="boolean-true">true</label>
-                <input type="radio" name="boolean" id="boolean-true">
-                <label for="boolean-false">false</label>
-                <input type="radio" name="boolean" id="boolean-false">
-                <hr/>
-                
+                    <h1 id="title">Survey</h1>
+                    <p id="description">This is a short survey.</p>
+    
+                </header>
+    
+                <form class="form flex-wrapper--column">
+                    <span class="no-wrap">
+                        <label for="name" id="name-label">name: </label>
+                        <input type="text" id="name" class="form__input--wide" placeholder="what do we call you?"/>    
+                    </span>
+                    <span class="no-wrap">
+                        <label for="email" id="email-label">email: </label>
+                        <input type="email" id="email" class="form__input--wide" placeholder="how do we reach you?"/>
+                    </span>
+                    <span class="no-wrap">
+                        <label for="number" id="number-label">number: </label>
+                        <input type="number" id="number" class="form__input--wide" min="0" max="9" placeholder="single digits only"/> 
+                    </span>
+                    <span class="no-wrap">
+                        <label for="color" id="color-label">pick a color: </label>
+                        <select class="form__input--wide" id="dropdown">
+                            <option>Red</option>
+                            <option>Blue</option>
+                            <option>Green</option>
+                            <option>Yellow</option>
+                        </select>        
+                    </span>
+                    <span class="no-wrap">
+                    <p>choose one: </p>
+                    <label for="boolean-true">true</label>
+                    <input type="radio" name="boolean" id="boolean-true">
+                    <label for="boolean-false">false</label>
+                    <input type="radio" name="boolean" id="boolean-false">
+                    </span>
+                    <p>choose a few:</p>
+                    <div class="flex-wrapper form__checkbox-field">
+                        <input type="checkbox" id="leaf" name="leaf" value="leaf">
+                        <label for="leaf">Leaf</label>
+                        <input type="checkbox" id="tower" name="tower" value="tower">
+                        <label for="tower">Tower</label>
+                        <input type="checkbox" id="arithmetic" name="arithmetic" value="arithmetic">
+                        <label for="arithmetic">Arithmetic</label>
+                        <input type="checkbox" id="chips" name="chips" value="chips">
+                        <label for="chips">Chips</label>
+                        <input type="checkbox" id="measure" name="measure" value="measure">
+                        <label for="">Measure</label>
+                        <input type="checkbox" id="stairs" name="stairs" value="stairs">
+                        <label for="">Stairs</label>
+                    </div>
+              
+                    <div class="flex-wrapper--column">
+                        <label for="text-box">type something: </label>
+                        <textarea id="text-box" name="text-box" rows="5" cols="30">...
+                        </textarea>
+                    </div>
+        
+                    <div class="button-wrapper">
 
-            </form>
+                        <button class="button button--submit" type="submit">
+                            submit form
+                        </button>
+                        <button class="button button--reset" type="reset">
+                            reset
+                        </button> 
+                        
+                    </div>
+                    
+    
+                </form>
+            </article>
+            
         </div>
 
     </body>
