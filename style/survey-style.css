@@ -3,6 +3,7 @@
 :root {
     --dark-blue: #0E2B4A;
     --yellow: #FFFA5A;
+    --pink: #BD489E;
 }
 
 *,
@@ -74,46 +75,73 @@ html, body {
 /* radio button styles */
 
 .radio {
-    font-size: 2.25rem;
-    color: var(--yellow);
     display: grid;
+    grid-template-columns: -webkit-min-content auto;
     grid-template-columns: min-content auto;
-    grid-gap: 0.5em;
-}
-
-.radio__input {
+    grid-gap: 1em;
+  }
+  .radio:focus-within .radio__label {
+      color: var(--yellow);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    opacity: 1;
+  }
+  
+  .radio__label {
+    line-height: 1;
+    -webkit-transition: 180ms all ease-in-out;
+    transition: 180ms all ease-in-out;
+    opacity: 0.8;
+  }
+  
+  .radio__input {
+    display: -webkit-box;
     display: flex;
-}
-
-.radio__input input {
+  }
+  .radio__input input {
     opacity: 0;
     width: 0;
     height: 0;
-}
-
-.radio__input input:checked + .radio__control {
-    background: radial-gradient(currentcolor 50%, rgba(255, 0, 0, 0) 51%);
-}
-
-.radio__input input:focus + .radio__control {
-    box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
-}
-
-.radio__control {
+  }
+  .radio__input input:focus + .radio__control {
+    box-shadow: 0 0 0 0.05em var(--yellow), 0 0 0.15em 0.1em var(--yellow);
+  }
+  
+  .radio-gradient input:checked + .radio__control {
+    background: radial-gradient(currentColor 50%, rgba(255, 0, 0, 0) 51%);
+  }
+  
+  .radio-before .radio__control {
     display: grid;
     place-items: center;
+  }
+  .radio-before input + .radio__control::before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    box-shadow: inset 0.5em 0.5em currentColor;
+    border-radius: 50%;
+    -webkit-transition: 180ms -webkit-transform ease-in-out;
+    transition: 180ms -webkit-transform ease-in-out;
+    transition: 180ms transform ease-in-out;
+    transition: 180ms transform ease-in-out, 180ms -webkit-transform ease-in-out;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .radio-before input:checked + .radio__control::before {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  
+  .radio__control {
+    display: block;
     width: 1em;
     height: 1em;
     border-radius: 50%;
     border: 0.1em solid currentColor;
-    /* this makes the label multi line safe*/
-    transform: translateY(-0.05em);
-}
-
-.radio__label {
-    line-height: 1;
-
-}
+    -webkit-transform: translateY(-0.05em);
+            transform: translateY(-0.05em);
+  }
 
 .form__input--wide {
     width: 220px;
