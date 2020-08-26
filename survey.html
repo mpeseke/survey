@@ -44,27 +44,64 @@
                             <option>Yellow</option>
                         </select>        
                     </span>
+
+
                     <span class="no-wrap">
-                    <p>choose one: </p>
-                    <label for="boolean-true">true</label>
-                    <input type="radio" name="boolean" id="boolean-true">
-                    <label for="boolean-false">false</label>
-                    <input type="radio" name="boolean" id="boolean-false">
+                    <p class="para-label">choose one: </p>
+                    <label class="radio">
+                        <span class="radio__input">
+                          <input class="hidden-radio" type="radio" name="boolean">
+                          <span class="radio__control"></span>
+                        </span>
+                        <span class="radio__label">true</span>
+                      </label>
+                      
+                      <label class="radio">
+                        <span class="radio__input">
+                          <input class="hidden-radio" type="radio" name="boolean">
+                          <span class="radio__control"></span>
+                        </span>
+                        <span class="radio__label">false</span>
+                      </label>
                     </span>
-                    <p>choose a few:</p>
+
+
+                    <p class="para-label">choose a few:</p>
                     <div class="flex-wrapper form__checkbox-field">
-                        <input type="checkbox" id="leaf" name="leaf" value="leaf">
-                        <label for="leaf">Leaf</label>
-                        <input type="checkbox" id="tower" name="tower" value="tower">
-                        <label for="tower">Tower</label>
-                        <input type="checkbox" id="arithmetic" name="arithmetic" value="arithmetic">
-                        <label for="arithmetic">Arithmetic</label>
-                        <input type="checkbox" id="chips" name="chips" value="chips">
+                        <div>
+                            <input type="checkbox" id="leaf" name="leaf" value="leaf">
+                            <label for="leaf">Leaf</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="tower" name="tower" value="tower">
+                            <label for="tower">Tower</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="arithmetic" name="arithmetic" value="arithmetic">
+                        <label for="arithmetic">Arithmetic</label> 
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="chips" name="chips" value="chips">
                         <label for="chips">Chips</label>
-                        <input type="checkbox" id="measure" name="measure" value="measure">
-                        <label for="">Measure</label>
-                        <input type="checkbox" id="stairs" name="stairs" value="stairs">
-                        <label for="">Stairs</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="measure" name="measure" value="measure">
+                            <label for="">Measure</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="stairs" name="stairs" value="stairs">
+                            <label for="">Stairs</label>
+                        </div>
+                        
+                       
+                        
+                       
+                        
                     </div>
               
                     <div class="flex-wrapper--column">
