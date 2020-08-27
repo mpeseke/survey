@@ -23,30 +23,31 @@
                 </header>
     
                 <form class="form flex-wrapper--column">
-                    <span class="no-wrap">
+
+
+
+
+                    <div class="field-wrap">
                         <label for="name" id="name-label">name: </label>
                         <input type="text" id="name" class="form__input--wide" placeholder="what do we call you?"/>    
-                    </span>
-                    <span class="no-wrap">
+                    </div>
+                    <div class="field-wrap">
                         <label for="email" id="email-label">email: </label>
                         <input type="email" id="email" class="form__input--wide" placeholder="how do we reach you?"/>
-                    </span>
-                    <span class="no-wrap">
+                    </div>
+                    <div class="field-wrap">
                         <label for="number" id="number-label">number: </label>
                         <input type="number" id="number" class="form__input--wide" min="0" max="9" placeholder="single digits only"/> 
-                    </span>
-                    <span class="no-wrap">
-                        <label for="color" id="color-label">pick a color: </label>
-                        <select class="form__input--wide" id="dropdown">
-                            <option>Red</option>
-                            <option>Blue</option>
-                            <option>Green</option>
-                            <option>Yellow</option>
-                        </select>        
-                    </span>
-
-
-                    <span class="no-wrap">
+                    </div>
+                    
+                    <label for="color" id="color-label">pick a color: </label>
+                    <select class="form__input--wide" id="dropdown">
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                        <option>Yellow</option>
+                    </select>        
+        
                     <p class="para-label">choose one: </p>
                     <label class="radio radio-before">
                         <span class="radio__input">
@@ -67,8 +68,8 @@
 
 
                     <p class="para-label">choose a few:</p>
-                    <div class="flex-wrapper form__checkbox-field">
-                        <div>
+                    <div class="form__checkbox-field">
+                        
                             <label class="checkbox checkbox-before">
                                 <span class="checkbox__input">
                                     <input class="hidden-checkbox" type="checkbox" name="leaf" value="leaf" id="leaf">
@@ -76,9 +77,9 @@
                                 </span>
                                 <span class="checkbox__label">leaf</span>
                             </label>
-                        </div>
+                        
 
-                        <div>
+                     
                             <label class="checkbox checkbox-before">
                                 <span class="checkbox__input">
                                     <input class="hidden-checkbox" type="checkbox" name="tower" value="tower" id="tower">
@@ -86,9 +87,8 @@
                                 </span>
                                 <span class="checkbox__label">tower</span>
                             </label>
-                        </div>
+                       
 
-                        <div>
                             <label class="checkbox checkbox-before">
                                 <span class="checkbox__input">
                                     <input class="hidden-checkbox" type="checkbox" name="arithmetic" value="arithmetic" id="arithmetic">
@@ -96,9 +96,9 @@
                                 </span>
                                 <span class="checkbox__label">arithmetic</span>
                             </label>
-                        </div>
                         
-                        <div>
+                        
+                  
                             <label class="checkbox checkbox-before">
                                 <span class="checkbox__input">
                                     <input class="hidden-checkbox" type="checkbox" name="chips" value="chips" id="chips">
@@ -106,9 +106,9 @@
                                 </span>
                                 <span class="checkbox__label">chips</span>
                             </label>
-                        </div>
+                  
                         
-                        <div>
+                  
                             <label class="checkbox checkbox-before">
                                 <span class="checkbox__input">
                                     <input class="hidden-checkbox" type="checkbox" name="measure" value="measure" id="measure">
@@ -116,9 +116,7 @@
                                 </span>
                                 <span class="checkbox__label">measure</span>
                             </label>
-                        </div>
-                        
-                        <div>
+           
                             <label class="checkbox checkbox-before">
                                 <span class="checkbox__input">
                                     <input class="hidden-checkbox" type="checkbox" name="stairs" value="stairs" id="stairs">
@@ -126,17 +124,12 @@
                                 </span>
                                 <span class="checkbox__label">stairs</span>
                             </label>
-                        </div>
-                        
-                       
-                        
-                       
-                        
+               
                     </div>
               
                     <div class="flex-wrapper--column">
                         <label for="text-box">type something: </label>
-                        <textarea id="text-box" name="text-box" rows="5" cols="30">...
+                        <textarea class="form__textarea" id="text-box" name="text-box" rows="5" cols="30">...
                         </textarea>
                     </div>
         
