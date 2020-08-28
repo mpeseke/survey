@@ -28,43 +28,45 @@
 
 
                     <div class="field-wrap">
-                        <label for="name" id="name-label">name: </label>
-                        <input type="text" id="name" class="form__input--wide" placeholder="what do we call you?"/>    
+                        <label for="name" id="name-label">name:<span class="required">*</span></label>
+                        <input type="text" id="name" class="form__input--wide" placeholder="what do we call you?" required/>    
                     </div>
                     <div class="field-wrap">
-                        <label for="email" id="email-label">email: </label>
-                        <input type="email" id="email" class="form__input--wide" placeholder="how do we reach you?"/>
+                        <label for="email" id="email-label">email:<span class="required">*</span> </label>
+                        <input type="email" id="email" class="form__input--wide" placeholder="how do we reach you?" required/>
                     </div>
                     <div class="field-wrap">
                         <label for="number" id="number-label">number: </label>
                         <input type="number" id="number" class="form__input--wide" min="0" max="9" placeholder="single digits only"/> 
                     </div>
                     
-                    <label for="color" id="color-label">pick a color: </label>
-                    <select class="form__input--wide" id="dropdown">
+                    <label for="color-select" id="color-label">pick a color: </label>
+                    <select class="form__input--wide" name="color-select" id="color-select">
                         <option>Red</option>
                         <option>Blue</option>
                         <option>Green</option>
                         <option>Yellow</option>
                     </select>        
         
-                    <p class="para-label">choose one: </p>
-                    <label class="radio radio-before">
-                        <span class="radio__input">
-                          <input class="hidden-radio" type="radio" name="boolean">
-                          <span class="radio__control"></span>
-                        </span>
-                        <span class="radio__label">true</span>
-                      </label>
-                      
-                      <label class="radio radio-before">
-                        <span class="radio__input">
-                          <input class="hidden-radio" type="radio" name="boolean">
-                          <span class="radio__control"></span>
-                        </span>
-                        <span class="radio__label">false</span>
-                      </label>
-                    </span>
+                    
+                    <fieldset>
+                        <legend class="para-label">choose one: </legend>
+                        <label class="radio radio-before">
+                            <span class="radio__input">
+                              <input class="hidden-radio" type="radio" name="boolean">
+                              <span class="radio__control"></span>
+                            </span>
+                            <span class="radio__label">true</span>
+                          </label>
+                          
+                          <label class="radio radio-before">
+                            <span class="radio__input">
+                              <input class="hidden-radio" type="radio" name="boolean">
+                              <span class="radio__control"></span>
+                            </span>
+                            <span class="radio__label">false</span>
+                          </label>
+                    </fieldset>
 
 
                     <p class="para-label">choose a few:</p>
@@ -128,11 +130,12 @@
                     </div>
               
                     <div class="flex-wrapper--column">
-                        <label for="text-box">type something: </label>
-                        <textarea class="form__textarea" id="text-box" name="text-box" rows="5" cols="30">...
-                        </textarea>
+                        <label for="text-box">type something:<span class="required">*</span> </label>
+                        <textarea class="form__textarea" id="text-box" name="text-box" placeholder="anything..." rows="5" cols="30" required></textarea>
                     </div>
-        
+
+                        <p><span class="required">*</span>required field</p>
+                    
                     <div class="button-wrapper">
 
                         <button class="button button--submit" type="submit">

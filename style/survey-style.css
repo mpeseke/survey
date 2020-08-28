@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
 
 html, body {
     font-family: 'Alata', sans-serif;
@@ -30,15 +34,18 @@ html, body {
   justify-content: center;
 }
 
+.required {
+  color: var(--pink);
+}
+
 .flex-wrapper--column {
     display: flex;
     flex-direction: column;
 }
 
 .flex-wrapper--column label {
-    margin-bottom: 0.5rem;
- }
-
+  margin-bottom: 0.5rem;
+}
  .form__checkbox-field {
     -moz-column-count:2; /* Firefox */
     -webkit-column-count : 2; /* Safari and Chrome */
@@ -84,6 +91,8 @@ html, body {
 }
 
 
+
+
 .form__input--wide {
   width: 100%;
   height: 1.5em;
@@ -93,6 +102,22 @@ html, body {
   border-right-style: hidden;
 }
 
+.form__input--wide:focus {
+  border: 0;
+  box-shadow: -0.10em 0.10em 0.25em 0.025em var(--yellow);
+  border-top-style: hidden;
+  border-right-style: hidden;
+  transform: scale(1.05);
+
+
+}
+
+
+fieldset {
+  border: none;
+  margin-top: 1em;
+  padding-left: 0;
+}
 
 
 
@@ -248,11 +273,16 @@ html, body {
   border-right-style: hidden;
 }
 
-
+.form__textarea:focus {
+  border: none;
+  box-shadow: -0.10em 0.10em 0.25em 0.025em var(--yellow);
+  border-top-style: hidden;
+  border-right-style: hidden;
+}
 
 .button-wrapper {
     display: flex;
-    margin-top: 1rem;
+    margin-top: 1em;
     justify-content: space-evenly;
 }
 
@@ -264,22 +294,32 @@ html, body {
     border-radius: 5px;
 }
 .button--submit {
-    background-color: #3BF5F2;
-    box-shadow: 4px 4px #BD489E;
+    background-color: var(--teal);
+    box-shadow: 4px 4px var(--pink);
+}
+
+.button--submit:hover, .button--submit:focus {
+  background-color: var(--teal);
+  box-shadow: 0.10em 0.10em 0.35em 0.025em var(--yellow);
 }
 
 .button--submit:active {
-    box-shadow: 2px 2px #BD489E;;
+    box-shadow: 2px 2px var(--pink);
     transform: translateY(2px), translateX(2px);
   }
 
 
 .button--reset {
-    background-color: #BD489E;
-    box-shadow: 4px 4px #FFFA5A;
+    background-color: var(--pink);
+    box-shadow: 4px 4px var(--teal);
+}
+
+.button--reset:hover, .button--reset:focus {
+  background-color: var(--pink);
+  box-shadow: 0.10em 0.10em 0.35em 0.025em var(--yellow);
 }
 
 .button--reset:active {
-    box-shadow: 2px 2px #FFFA5A;
+    box-shadow: 2px 2px var(--yellow);
     transform: translateY(2px), translateX(2px);
 }
